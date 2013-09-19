@@ -8,6 +8,8 @@
 //$format = 'zip -P %1d %2s %3s';
 //system(sprintf($format, $pass, $num, $location));
 
+
+//random string
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $randomString = '';
@@ -17,11 +19,17 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 
+//password generate dari random string
 $password = generateRandomString();
+
+//output file
 $outfile = 'file.zip';
+
+//input file
 $infile = 'file.txt';
 
-echo $password;
+echo $password; //keluarin password yang d generate sama random string
+
 system("zip -P $password $outfile $infile");
 
 
